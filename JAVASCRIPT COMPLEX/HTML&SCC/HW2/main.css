@@ -1,0 +1,32 @@
+h1 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: darkred;
+}
+
+a:hover {
+    color: green;
+}
+
+body {
+    background: #b3b1b1;
+}
+
+.target {
+    background: silver;
+    color: #111111
+}
+
+.description {
+    text-align: justify;
+}
+img {
+    width: 500px;
+    border: 5px solid #07517d;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+

@@ -1,0 +1,50 @@
+html {
+    font-size: 50px;
+}
+
+body {
+    background: gray;
+    text-align: justify;
+
+}
+
+.wrap {
+    box-sizing: border-box;
+    border-radius: 20px;
+    background: aliceblue;
+    border: 5px solid green;
+}
+
+.box {
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: #07517d;
+    box-sizing: border-box;
+}
+
+.box_A {
+
+    margin: 5px 5px;
+}
+
+.box_B {
+    width: 80%;
+}
+
+.box_C {
+    width: 20%;
+    padding: 15px;
+}
+
+.boxes {
+    display: flex;
+    margin: 0px 5px 5px 5px;
+    column-gap: 5px;
+}
+
+p {
+    font-size: 20px;
+}

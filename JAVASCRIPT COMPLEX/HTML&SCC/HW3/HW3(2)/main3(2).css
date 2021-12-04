@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.wrap{
+    border: solid 2px;
+    border-radius: 2px;
+    margin: 15px 15px;
+}
+.d-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    height: 150px;
+    background: #07517d;
+}
+.nav{
+    height: 100px;
+    background: #99c9e7;
+
+}
+.conteiner{
+    height: 400px;
+
+
+}
+.main{
+    background: aqua;
+    width: 70%;
+    height: 100%;
+
+}
+.aside{
+    background: cornflowerblue;
+    width: 30%;
+    height: 100%;
+}
+.footer{
+    height: 150px;
+    background:aquamarine ;
+}
