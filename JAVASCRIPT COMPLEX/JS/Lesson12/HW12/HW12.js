@@ -5,26 +5,26 @@
 // https://jsonplaceholder.typicode.com/posts
 //
 
-// fetch(`https://jsonplaceholder.typicode.com/posts`)
-//     .then(response => response.json())
-//     .then(posts => {
-//         // console.log(posts)
-//         let divPost = document.createElement('div');
-//         divPost.classList.add('divPost');
-//         for (const post of posts) {
-//             let divCard = document.createElement('div');
-//             divCard.classList.add('divCard')
-//             divCard.innerHTML = `
-//                     <h3>Post number: ${post.id}</h3>
-//                     <h4>Title: ${post.title}</h4>
-//                     <h5>Body: ${post.body}</h5>
-//                     `;
-//
-//             divPost.appendChild(divCard);
-//             document.body.appendChild(divPost);
-//         }
-//
-//     });
+fetch(`https://jsonplaceholder.typicode.com/posts`)
+    .then(response => response.json())
+    .then(posts => {
+        // console.log(posts)
+        let divPost = document.createElement('div');
+        divPost.classList.add('divPost');
+        for (const post of posts) {
+            let divCard = document.createElement('div');
+            divCard.classList.add('divCard')
+            divCard.innerHTML = `
+                    <h3>Post number: ${post.id}</h3>
+                    <h4>Title: ${post.title}</h4>
+                    <h5>Body: ${post.body}</h5>
+                    `;
+
+            divPost.appendChild(divCard);
+            document.body.appendChild(divPost);
+        }
+
+    });
 
 
 //     2.
