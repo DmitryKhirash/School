@@ -1,0 +1,27 @@
+.body{
+    display: flex;
+    justify-content: center;
+}
+
+.wrap{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.divCard {
+    width: 250px;
+    border: 2px solid silver;
+    box-sizing: border-box;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 8px;
+
+}
+.btn{
+    cursor: pointer;
+}
