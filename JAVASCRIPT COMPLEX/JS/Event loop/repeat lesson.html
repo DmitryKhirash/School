@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<button id ='btn'>CLICK</button>
+
+<script>
+
+
+    // setTimeout(() => {
+    //     console.log(1)
+    // }, 400);
+    //
+    // console.log(7)
+    //
+    // setTimeout(() => {
+    //     console.log(2);
+    // }, 100)
+
+    // let elementById = document.getElementById('btn');
+    //
+    // elementById.onclick = () =>{
+    //     console.log('CLICK')
+    // }
+    //
+    // let i = 0;
+    // while (i < 999999999) {
+    //     i++
+    // }
+
+
+  ///Виконання впорядкування asynchronous tasks callback function, древній метод--------
+
+    //   let money = 100;
+  //
+  //   function goWork(isJobDone, callback) {
+  //       setTimeout(() => {
+  //           if (isJobDone) {
+  //               money += 400;
+  //               console.log('Job done')
+  //               callback()
+  //           } else {
+  //               console.log('No money no honey');
+  //           }
+  //       }, 3000)
+  //
+  //   }
+  //
+  //   function flyToEgypt(dollars) {
+  //           setTimeout(() => {
+  //               console.log(dollars, '$')
+  //               if (dollars > 400) {
+  //                   console.log('Yes');
+  //               } else {
+  //                   console.log('В Бердичів')
+  //               }
+  //               }, 1000)
+  //
+  //   }
+  //
+  //   goWork(true, () =>{
+  //       console.log('I`m here');
+  //   });
+  //
+  // goWork(true, () => {
+  //     flyToEgypt(money)
+  // })
+  //
+  //   flyToEgypt(money)
+
+    // New method it's ---'return new Promise'---
+
+    let money = 100;
+
+    function goWork(isJobDone) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (isJobDone) {
+                    money += 400;
+                    console.log('Job done');
+                    resolve(money)
+                } else {
+                    console.log('No money no honey');
+                    reject('Ooops')
+                }
+            }, 3000)
+        })
+
+
+      }
+
+    function flyToEgypt(dollars) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log(dollars, '$')
+                if (dollars > 400) {
+                    console.log('Yes');
+                    resolve('Fly to Egypt')
+                } else {
+                    console.log('В Бердичів')
+                    reject('oh no')
+                }
+            }, 1000)
+        });
+
+    }
+
+    goWork(true)
+        .then(salary => {
+            return flyToEgypt(salary);
+        })
+    .then(result => {
+        console.log(result)
+    })
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
