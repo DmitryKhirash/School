@@ -178,7 +178,6 @@ function brashTeeth(myMood) {
         setTimeout(() => {
             if (myMood > 10) {
                 mood += 15
-                console.log(mood, 'I`m clean.')
                 resolve(mood)
             } else {
                 reject('Try again')
@@ -231,7 +230,7 @@ function wayToWork(waitListenMusic) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (waitListenMusic >= 60) {
-                mood += 5;
+                mood += 15;
                 resolve(mood);
             } else {
                 reject('Dou')
@@ -255,48 +254,50 @@ function workTime(work, jobDone) {
 }
 
 function meetFriends(toPay, field) {
-    setTimeout(()=>{
-        if (toPay >= 10){
-            money -=10
-            mood +=20
-            console.log(mood, 'Go to the ice rink. It`s amazing!');
-            console.log(money, '$ Ok')
-            callback(null, 'Fine meet')
-        } else {
-            console.log('Dou', null)
-        }
-    },600)
+    return new Promise((resolve, reject) => {
+        setTimeout(()=>{
+            if (toPay >= 10){
+                money -=10
+                mood +=20
+                resolve(mood)
+            } else {
+                reject('Dou')
+            }
+        },600)
+    });
 }
 
 function relax(relax) {
-    setTimeout(()=>{
-        if (relax >=110){
-            mood += 15;
-            console.log(mood, 'Time for reed a book')
-            callback(null, 'Grate time')
-        } else {
-            console.log('Dou', null);
-        }
-    },559)
+    return new Promise((resolve, reject) => {
+        setTimeout(()=>{
+            if (relax >=110){
+                mood += 15;
+                resolve(mood)
+            } else {
+                reject('Dou');
+            }
+        },559)
+    });
 }
 
 function dream(dream) {
-    setTimeout(()=>{
-        if (dream){
-            mood += 40;
-            console.log(mood, 'Forward to the future! Zzzzz...')
-            callback(null, 'Zzzz')
-        } else {
-            console.log('Dou')
-        }
-    },1000)
+    return new Promise((resolve, reject) => {
+        setTimeout(()=>{
+            if (dream){
+                mood += 40;
+                resolve(mood)
+            } else {
+              reject('Dou')
+            }
+        },1000)
+    });
 }
 
 async function weekDay() {
     const getUp = await toWakeUp(true);
         console.log(getUp, 'Go to brash teeth.');
     const brashT = await brashTeeth(getUp);
-        console.log(brashT, 'Go to shower.');
+        console.log(brashT, 'I`m clean. Go to shower.');
     const shower = await goToShower(brashT);
         console.log(shower, 'Fine. Time for breakfast');
     const breakfast = await toBreakfast(shower);
@@ -307,8 +308,14 @@ async function weekDay() {
         console.log(wayInRoad,'I like listen to music. And now I ready to progressing for work' )
     const workingMood = await workTime(wayInRoad)
         console.log(workingMood,  'Cool working today. How much did I earn today?')
-    const salary = await workTime(workingMood)
         console.log(money, '$ Wow,it`s good! Go to meet friend')
+    const meetF = await meetFriends(workingMood);
+        console.log(meetF,'Go to the ice rink. It`s amazing!');
+        console.log(money, '$ Ok');
+    const freeTime = await relax(meetF);
+        console.log(freeTime, 'Grate, time for reed a book')
+    const sleep = await dream(freeTime);
+        console.log(sleep, 'Forward to the future! Zzzzz...')
 }
 
 weekDay()
