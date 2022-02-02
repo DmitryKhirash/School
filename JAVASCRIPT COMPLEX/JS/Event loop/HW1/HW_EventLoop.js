@@ -156,166 +156,237 @@
 // });
 
 
-let mood = 10;
-let money = 0;
+// let mood = 10;
+// let money = 0;
+//
+// function toWakeUp(isDone) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (isDone) {
+//                 console.log(mood, 'It`s fanny day for me.')
+//                 mood += 20;
+//                 resolve(mood)
+//             } else {
+//                 reject('Ops I overslept')
+//             }
+//         }, 300)
+//     });
+// }
+//
+// function brashTeeth(myMood) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (myMood > 10) {
+//                 mood += 15
+//                 resolve(mood)
+//             } else {
+//                 reject('Try again')
+//             }
+//         }, 500)
+//     });
+// }
+//
+//
+// function goToShower(fresh) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (fresh >= 45) {
+//                 mood += 20;
+//                 resolve(mood)
+//             } else {
+//                 reject('Ops. I lost my breakfast');
+//             }
+//         }, 400)
+//     });
+// }
+//
+// function toBreakfast(cook) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (cook >= 60) {
+//                 mood += 5;
+//                 resolve(mood);
+//             } else {
+//                 reject('Dou')
+//             }
+//         }, 450)
+//     });
+// }
+//
+// function toGetDressed(showClothes) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (showClothes >= 52) {
+//                 mood += 10
+//                 resolve(mood)
+//             } else {
+//                 reject('Ops')
+//             }
+//         }, 200)
+//     });
+// }
+//
+// function wayToWork(waitListenMusic) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (waitListenMusic >= 60) {
+//                 mood += 15;
+//                 resolve(mood);
+//             } else {
+//                 reject('Dou')
+//             }
+//         }, 450)
+//     });
+// }
+//
+// function workTime(work, jobDone) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (work >= 70) {
+//                 mood += 30
+//                 money += 500;
+//                 resolve(mood)
+//             } else {
+//                 reject('Dou');
+//             }
+//         }, 1000)
+//     });
+// }
+//
+// function meetFriends(toPay, field) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (toPay >= 10) {
+//                 money -= 10
+//                 mood += 20
+//                 resolve(mood)
+//             } else {
+//                 reject('Dou')
+//             }
+//         }, 600)
+//     });
+// }
+//
+// function relax(relax) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (relax >= 110) {
+//                 mood += 15;
+//                 resolve(mood)
+//             } else {
+//                 reject('Dou');
+//             }
+//         }, 559)
+//     });
+// }
+//
+// function dream(dream) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (dream) {
+//                 mood += 40;
+//                 resolve(mood)
+//             } else {
+//                 reject('Dou')
+//             }
+//         }, 1000)
+//     });
+// }
 
-function toWakeUp(isDone) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if (isDone) {
-                console.log(mood, 'It`s fanny day for me.')
-                mood += 20;
-                resolve(mood)
-            } else {
-                reject('Ops I overslept')
-            }
-        }, 300)
-    });
-}
 
-function brashTeeth(myMood) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if (myMood > 10) {
-                mood += 15
-                resolve(mood)
-            } else {
-                reject('Try again')
-            }
-        }, 500)
-    });
-}
+//.then//
+//
+// toWakeUp(true)
+//     .then(myMood => {
+//         console.log(myMood, 'Go to brash teeth.')
+//         return brashTeeth(myMood);
+//     })
+//     .then(brashT => {
+//         console.log(brashT, 'I`m clean. Go to shower.')
+//         return goToShower(brashT);
+//     })
+//     .then(shower => {
+//         console.log(shower, 'Fine. Time for breakfast');
+//         return toBreakfast(shower);
+//     })
+//     .then(breakfast => {
+//         console.log(breakfast, 'Mmmm, ty-ty-dy...')
+//         return toGetDressed(breakfast)
+//     })
+//     .then(clothing => {
+//         console.log(clothing, 'It`s time to pick up clothes. You look grate. Run to work!')
+//         return wayToWork(clothing)
+//     })
+//     .then(theWay => {
+//         console.log(theWay, 'I like listen to music. And now I ready to progressing for work')
+//         return workTime(theWay)
+//     })
+//     .then(friends => {
+//         console.log(friends, 'Cool working today. How much did I earn today?')
+//         console.log(money, '$ Wow,it`s good! Go to meet friend')
+//         return meetFriends(friends)
+//     })
+//     .then(vacation => {
+//         console.log(vacation, 'Go to the ice rink. It`s amazing!');
+//         console.log(money, '$ Ok');
+//         return relax(vacation);
+//     })
+//     .then(dreamTime => {
+//         console.log(dreamTime, 'Grate, time for reed a book')
+//         return dream(dreamTime)
+//     })
+//     .then(sleep => {
+//         console.log(sleep, 'Forward to the future! Zzzzz...')
+//     })
+//     .catch(e => {
+//         console.error(e)
+//     })
+//     .finally(() => {
+//         console.log('To be continued')
+//     })
+
+//async function//
+
+// async function weekdays() {
+//     try {
+//         const getUp = await toWakeUp(false);
+//         console.log(getUp, 'Go to brash teeth.');
+//
+//         const brashT = await brashTeeth(getUp);
+//         console.log(brashT, 'I`m clean. Go to shower.');
+//
+//         const shower = await goToShower(brashT);
+//         console.log(shower, 'Fine. Time for breakfast');
+//
+//         const breakfast = await toBreakfast(shower);
+//         console.log(breakfast, 'Mmmm, ty-ty-dy...')
+//
+//         const clothing = await toGetDressed(breakfast);
+//         console.log(clothing, 'It`s time to pick up clothes. You look grate. Run to work!')
+//
+//         const wayInRoad = await wayToWork(clothing);
+//         console.log(wayInRoad, 'I like listen to music. And now I ready to progressing for work')
+//
+//         const workingMood = await workTime(wayInRoad)
+//         console.log(workingMood, 'Cool working today. How much did I earn today?')
+//         console.log(money, '$ Wow,it`s good! Go to meet friend')
+//
+//         const meetF = await meetFriends(workingMood);
+//         console.log(meetF, 'Go to the ice rink. It`s amazing!');
+//         console.log(money, '$ Ok');
+//
+//         const freeTime = await relax(meetF);
+//         console.log(freeTime, 'Grate, time for reed a book')
+//
+//         const sleep = await dream(freeTime);
+//         console.log(sleep, 'Forward to the future! Zzzzz...')
+//     } catch (e) {
+//         console.info(e, 'Dou!!!')
+//     }
+// }
+//
+// weekdays()
 
 
-function goToShower(fresh) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if (fresh >= 45) {
-                mood += 20;
-                resolve(mood)
-            } else {
-                reject('Ops. I lost my breakfast');
-            }
-        }, 400)
-    });
-}
 
-function toBreakfast(cook) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if (cook >= 60) {
-                mood += 5;
-                resolve(mood);
-            } else {
-                reject('Dou')
-            }
-        }, 450)
-    });
-}
 
-function toGetDressed(showClothes) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if (showClothes >= 52) {
-                mood += 10
-                resolve(mood)
-            } else {
-                reject('Ops')
-            }
-        }, 200)
-    });
-}
-
-function wayToWork(waitListenMusic) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if (waitListenMusic >= 60) {
-                mood += 15;
-                resolve(mood);
-            } else {
-                reject('Dou')
-            }
-        }, 450)
-    });
-}
-
-function workTime(work, jobDone) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if (work >= 70) {
-                mood += 30
-                money += 500;
-                resolve(mood)
-            } else {
-                reject('Dou');
-            }
-        }, 1000)
-    });
-}
-
-function meetFriends(toPay, field) {
-    return new Promise((resolve, reject) => {
-        setTimeout(()=>{
-            if (toPay >= 10){
-                money -=10
-                mood +=20
-                resolve(mood)
-            } else {
-                reject('Dou')
-            }
-        },600)
-    });
-}
-
-function relax(relax) {
-    return new Promise((resolve, reject) => {
-        setTimeout(()=>{
-            if (relax >=110){
-                mood += 15;
-                resolve(mood)
-            } else {
-                reject('Dou');
-            }
-        },559)
-    });
-}
-
-function dream(dream) {
-    return new Promise((resolve, reject) => {
-        setTimeout(()=>{
-            if (dream){
-                mood += 40;
-                resolve(mood)
-            } else {
-              reject('Dou')
-            }
-        },1000)
-    });
-}
-
-async function weekDay() {
-    const getUp = await toWakeUp(true);
-        console.log(getUp, 'Go to brash teeth.');
-    const brashT = await brashTeeth(getUp);
-        console.log(brashT, 'I`m clean. Go to shower.');
-    const shower = await goToShower(brashT);
-        console.log(shower, 'Fine. Time for breakfast');
-    const breakfast = await toBreakfast(shower);
-        console.log(breakfast, 'Mmmm, ty-ty-dy...')
-    const clothing = await toGetDressed(breakfast);
-        console.log(clothing, 'It`s time to pick up clothes. You look grate. Run to work!')
-    const wayInRoad = await wayToWork(clothing);
-        console.log(wayInRoad,'I like listen to music. And now I ready to progressing for work' )
-    const workingMood = await workTime(wayInRoad)
-        console.log(workingMood,  'Cool working today. How much did I earn today?')
-        console.log(money, '$ Wow,it`s good! Go to meet friend')
-    const meetF = await meetFriends(workingMood);
-        console.log(meetF,'Go to the ice rink. It`s amazing!');
-        console.log(money, '$ Ok');
-    const freeTime = await relax(meetF);
-        console.log(freeTime, 'Grate, time for reed a book')
-    const sleep = await dream(freeTime);
-        console.log(sleep, 'Forward to the future! Zzzzz...')
-}
-
-weekDay()
