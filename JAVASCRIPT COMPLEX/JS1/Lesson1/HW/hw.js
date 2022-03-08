@@ -170,29 +170,32 @@
 // 123 ? '123' -> true
 //
 
-let a = 5 > 6;
-console.log(a);
-let b = 5 >= 6;
-console.log(b);
-let c = 5 === 6;
-console.log(c);
-let d = 10 <= 10;
-console.log(d);
-let e = 10 === 10;
-console.log(e);
-let f = 10 < 10;
-console.log(f);
-let g = 10 > 10;
-console.log(g);
-let h = 10 !== 10;
-console.log(h);
-let i = 123 > '123';
-console.log(i);
-let j = 123 !== '123';
-console.log(j)
+// let a = 5 > 6;
+// console.log(a);
+// let b = 5 >= 6;
+// console.log(b);
+// let c = 5 === 6;
+// console.log(c);
+// let d = 10 <= 10;
+// console.log(d);
+// let e = 10 === 10;
+// console.log(e);
+// let f = 10 < 10;
+// console.log(f);
+// let g = 10 > 10;
+// console.log(g);
+// let h = 10 !== 10;
+// console.log(h);
+// let i = 123 > '123';
+// console.log(i);
+// let j = 123 !== '123';
+// console.log(j)
 
 
 // - Подумайте Какие значения выведет в окно браузера следующий фрагмент кода?  и почему?
 //     let str = "20";
 // let a = 5;
-// documen
+// document.write(str + a + "<br/>");
+// document.write(str - a + "<br/>");
+// document.write(str * "2" + "<br/>");
+// document.write(str / 2 + "<br/>");
