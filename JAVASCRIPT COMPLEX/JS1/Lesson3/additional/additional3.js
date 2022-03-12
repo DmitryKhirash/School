@@ -1,15 +1,71 @@
 // 1. Створити пустий масив та :
 let array = [];
 //     a. заповнити його 50 парними числами за допомоги циклу.
-for (let i = 0; i < 100; i++) {
+// let x = 0;
+// for (let i = 0, x = 0; i <50; i++) {
+//     array[i] = x;
+//     x += 2;
+// }
+// console.log(array)
 
-}
 //     b. заповнити його 50 непарними числами за допомоги циклу.
+// let x = 0;
+// for (let i = 0, x = 1; i < 50; i++) {
+//     array[i] = x;
+//     x += 2;
+// }
+// console.log(array)
+
 //     c. Заповнити масив 20ма рандомними числами. (Google: Generate random number JS)
+
+// let x = 0;
+// for (let i = 0, x = 0; i < 20; i++) {
+//     array[i] = x
+//     x = Math.round(Math.random() * 100);
+// }
+// console.log(array)
 // d. Заповнити масив 20ма рандомними чисалами в діапазоні від 8 до 732 (Google: Generate random number JS)
+
+// let x = 0;
+// for (let i = 0, x = 8; i < 20; i++) {
+//     array[i] = x;
+//     x = Math.round(Math.random() * 732);
+// }
+// console.log(array)
+
 // 2. Вивести за допомогою console.log кожен третій елемен
+// let x = 0;
+// for (let i = 0, x = 0; i < 10; i++) {
+//     array[i] = x;
+//     x += 3;
+// }
+// for (const arrayElement of array) {
+//     console.log(arrayElement)
+// }
 // 3. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним.
+// let x = 0;
+// for (let i = 0, x = 0; i < 10; i++) {
+//     array[i] = x;
+//     x += 3;
+// }
+// for (const arrayElement of array) {
+//     if (arrayElement % 2 === 0) {
+//         console.log(arrayElement)
+//     }
+// }
 // 4. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним та записати їх в новий масив
+let x = 0;
+for (let i = 0, x = 0; i < 10; i++) {
+    array[i] = x;
+    x += 3;
+}
+for (const arrayElement of array) {
+    if (arrayElement % 2 === 0) {
+        let newArr= [arrayElement];
+        console.log(newArr)
+    }
+}
+
 // 5. Вивести кожен елемент масиву, сусід справа якого є парним
 // EXAMPLE: [ 1, 2, 3, 5, 7, 9, 56, 8, 67 ] -> Має бути виведено 1, 9, 56
 // 6. Є масив з числами [100,250,50,168,120,345,188], Які характеризують вартість окремої покупки. Обрахувати середній чек.
