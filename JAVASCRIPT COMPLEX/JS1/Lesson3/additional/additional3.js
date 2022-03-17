@@ -1,5 +1,5 @@
 // 1. Створити пустий масив та :
-let array = [];
+// let array = [];
 //     a. заповнити його 50 парними числами за допомоги циклу.
 // let x = 0;
 // for (let i = 0, x = 0; i <50; i++) {
@@ -54,26 +54,63 @@ let array = [];
 //     }
 // }
 // 4. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним та записати їх в новий масив
-let x = 0;
-for (let i = 0, x = 0; i < 10; i++) {
-    array[i] = x;
-    x += 3;
-}
-for (const arrayElement of array) {
-    if (arrayElement % 2 === 0) {
-        let newArr= [arrayElement];
-        console.log(newArr)
-    }
-}
+// let x = 0;
+// for (let i = 0, x = 0; i < 10; i++) {
+//     array[i] = x;
+//     x += 3;
+// }
+// const newArray = [];
+// for (const arrayElement of array) {
+//     if (arrayElement % 2 === 0) {
+//      newArray.push(arrayElement);
+//     }
+// }
+// console.log(newArray)
 
 // 5. Вивести кожен елемент масиву, сусід справа якого є парним
 // EXAMPLE: [ 1, 2, 3, 5, 7, 9, 56, 8, 67 ] -> Має бути виведено 1, 9, 56
+//
+// let arrExample = [1, 2, 3, 5, 7, 9, 56, 8, 67];
+// for (let i = 0; i < arrExample.length; i++) {
+//     if (arrExample[i + 1] % 2 === 0) {
+//         console.log(arrExample[i])
+//     }
+// }
+
 // 6. Є масив з числами [100,250,50,168,120,345,188], Які характеризують вартість окремої покупки. Обрахувати середній чек.
 //
+// let arrNum = [100, 250, 50, 168, 120, 345, 188];
+// let sum = 0;
+// for (let i = 0; i < arrNum.length; i++) {
+//     sum += arrNum[i];
+// }
+// let result = sum / arrNum.length;
+// console.log(result)
+//
 // 7. Створити масив з рандомними значеннями, помножити всі його елементи на 5 та перемістити їх в інший масив.
+// let arrayRandom = ['hello', 'I', 'am', 26, 'year', 52];
+// let newArray = [];
+// for (let i = 0; i < arrayRandom.length; i++) {
+//     if (typeof arrayRandom[i] === "number") {
+//         arrayRandom[i] *= 5;
+//         newArray.push(arrayRandom[i])
+//     }
+//
+// }
+// console.log(newArray)
+
 // 8. Створити масив з будь якими значеннями (стрінги, числа, і тд...). пройтись по ньому, і якщо елемент є числом - додати його в інший масив.
 //
+// let arrayRandom = ['hello', 'I', 'am', 26, 'year', 52];
+// let newArray = [];
+// for (let i = 0; i < arrayRandom.length; i++) {
+//     if (typeof arrayRandom[i] === "number") {
+//         arrayRandom[i] *= 5;
+//         newArray.push(arrayRandom[i])
+//     }
 //
+// }
+// console.log(newArray)
 //
 // - Дано 2 масиви з рівною кількістю об'єктів.
 // Масиви:
@@ -90,6 +127,17 @@ for (const arrayElement of array) {
 //     {user_id: 2, country: 'Poland', city: 'Krakow'},
 //     {user_id: 4, country: 'USA', city: 'Miami'}
 // ];
+//
+// let userWithCities = [];
+// for (const userId of usersWithId) {
+//     for (const citiId of citiesWithId) {
+//         if (userId.id === citiId.user_id) {
+//             userWithCities.push({...userId, ...citiId})
+//         }
+//     }
+//
+// }
+// console.log(userWithCities)
 //
 // З'єднати в один об'єкт користувача та місто з відповідними "id" та "user_id" .
 //     Записати цей об'єкт в новий масив
